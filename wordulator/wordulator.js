@@ -1,8 +1,10 @@
 function guess(word, solution) {
-  if (word === solution) {
-    return ["green", "green", "green", "green", "green"];
-  } else if (word !== solution) {
-    return ["black", "black", "black", "black", "black"]
+  for (let i = 0; i <= word.length; i++){
+    if (word[i] === solution[i]) {
+      return ["green"];
+    } else if (word[i] !== solution[i]) {
+      return ["black"]
+    }
   }
 }
 
