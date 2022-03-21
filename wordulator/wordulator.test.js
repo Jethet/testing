@@ -5,5 +5,9 @@ test("guess returns all green when the word is the solution", () => {
 });
 
 test("guess returns no letters in common with solutions", () => {
-  expect(guess("peter", "hannah")).toEqual(["black", "black", "black", "black", "black"])
+  expect(guess("peter", "hanna")).toEqual(["black", "black", "black", "black", "black"])
+})
+
+test("guess returns three letters in common with solutions", () => {
+  expect(guess("peter", "ester")).toEqual(["black", "black", "green", "green", "green"])
 })
